@@ -1,7 +1,9 @@
+import Covid19List from './components/Covid19List';
+
 function App() {
   return (
-    <div className="App">
-      <h2>App Component</h2>
+    <div>
+      <Covid19List />
     </div>
   );
 }

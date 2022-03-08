@@ -1,10 +1,10 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import weatherReducer from './weather/weather';
+import covidReducer from './covid19/covid19';
 
 const reducer = combineReducers({
-  weather: weatherReducer,
+  covids: covidReducer,
 });
 
 const store = createStore(
