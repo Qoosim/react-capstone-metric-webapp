@@ -15,7 +15,9 @@ export const fetchDataFromApi = async () => {
   const url = `${basedUrl}${formattedDate}`;
   const response = await fetch(url);
   const data = await response.json();
-  return data.dates[formattedDate].countries;
+  const formattedData = data.dates[formattedDate].countries;
+  const dataConverted = Object.entries(formattedData);
+  return dataConverted;
 };
 
 const covidReducer = (state = initialState, action) => {
