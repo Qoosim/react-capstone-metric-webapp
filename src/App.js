@@ -1,9 +1,10 @@
-import Covid19List from './components/Covid19List';
+// import CountryDetails from './components/CountryDetails';
+import Home from './components/Home';
 
 function App() {
   return (
     <div>
-      <Covid19List />
+      <Home />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import covidReducer from './covid19/covid19';
 
 const reducer = combineReducers({
-  covids: covidReducer,
+  covidData: covidReducer,
 });
 
 const store = createStore(
