@@ -35,7 +35,7 @@ const CountryDetails = () => {
 
   return (
     <>
-      <Header title={country} backBtn />
+      <Header title={country} btnBack />
       <main className="pt-5 bg-custom1 text-white min-vh-100">
         <Container fluid="md" className="pt-1 pt-sm-2 pt-md-3 pt-lg-4 px-0">
           <Total covidDataTotal={countryCovidData} />
@@ -85,35 +85,3 @@ const CountryDetails = () => {
 };
 
 export default CountryDetails;
-
-/*
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchDataFromApi, getData } from '../redux/covid19/covid19';
-import Country from './Country';
-
-const CountryDetails = () => {
-  const covidData = useSelector((state) => state.covidData);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    fetchDataFromApi().then((result) => dispatch(getData(result)));
-  }, []);
-
-  return (
-    <>
-      {
-        covidData.map(([countryName, countryInfo]) => (
-          <Country
-            key={countryInfo.id}
-            countryName={countryName}
-            countryInfo={countryInfo}
-          />
-        ))
-      }
-    </>
-  );
-};
-
-export default CountryDetails;
-*/
