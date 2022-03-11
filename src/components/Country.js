@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 import { Card, Col, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-const Country = ({ name, info }) => {
-  const {
-    today_confirmed: confirmedTotal,
-    today_deaths: deathsTotal,
-    today_recovered: recoveredTotal,
-  } = info;
-
+const Country = ({
+  name, confirmedTotal,
+  deathsTotal, recoveredTotal,
+}) => {
   const navigate = useNavigate();
 
   return (
@@ -44,11 +41,9 @@ const Country = ({ name, info }) => {
 
 Country.propTypes = {
   name: PropTypes.string.isRequired,
-  info: PropTypes.shape({
-    today_confirmed: PropTypes.number,
-    today_deaths: PropTypes.number,
-    today_recovered: PropTypes.number,
-  }).isRequired,
+  confirmedTotal: PropTypes.number.isRequired,
+  deathsTotal: PropTypes.number.isRequired,
+  recoveredTotal: PropTypes.number.isRequired,
 };
 
 export default Country;

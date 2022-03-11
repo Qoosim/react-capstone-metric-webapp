@@ -1,5 +1,4 @@
-const GET_COVID = 'covid-19/GET_DATA';
-const SET_DATA = 'covid-metrics/covid19/SET_DATA';
+const SET_DATA = 'metrics-webapp/covid19/SET_DATA';
 const SET_IS_FIRST_RENDER = 'metrics-webapp/covid19/SET_IS_FIRST_RENDER';
 const SET_TODAYS_DATE = 'metrics-webapp/covid19/SET_TODAYS_DATE';
 
@@ -34,15 +33,25 @@ export const setTodaysDate = (payload) => ({
   payload,
 });
 
-export const fetchDataFromApi = async () => {
-  const date = new Date();
-  const formattedDate = date.toISOString().replace(/T.+/g, '');
-  const url = `${basedUrl}${formattedDate}`;
+/*
+const date = new Date();
+const formattedDate = date.toISOString().replace(/T.+/g, '');
+const dataConverted = Object.entries(formattedData);
+*/
+
+const fetchDataFromApi = async (date) => {
+  const url = `${basedUrl}${date}`;
   const response = await fetch(url);
   const data = await response.json();
-  const formattedData = data.dates[formattedDate].countries;
-  const dataConverted = Object.entries(formattedData);
-  return dataConverted;
+  return data;
+};
+
+export const getDataFromApi = (date) => (dispatch) => {
+  fetchDataFromApi(date).then((data) => {
+    dispatch(setTodaysDate(date));
+    dispatch(setIsFirstRender(false));
+    dispatch(setData(data));
+  });
 };
 
 const covidReducer = (state = initialState, action) => {
