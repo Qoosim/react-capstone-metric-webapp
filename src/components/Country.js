@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Card, Col, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Country = ({ name, info }) => {
   const {
@@ -8,47 +10,44 @@ const Country = ({ name, info }) => {
     today_recovered: recoveredTotal,
   } = info;
 
+  const navigate = useNavigate();
+
   return (
-    <>
-      <div>
-        <h2>{name}</h2>
-        <p>
-          Confirmed:
-          {' '}
-          {confirmedTotal}
-        </p>
-        <p>
-          Deaths:
-          {' '}
-          {deathsTotal}
-        </p>
-        <p>
-          Recovered:
-          {' '}
-          {recoveredTotal}
-        </p>
-      </div>
-    </>
+    <Card
+      className="rounded-0 h-100 cursor-pointer bg-country"
+      onClick={() => navigate(`/details/${name}`)}
+      data-testid="country"
+    >
+      <Card.Body className="d-flex flex-column justify-content-center">
+        <Card.Title>{name}</Card.Title>
+        <Row xs={1}>
+          <Col>
+            Confirmed:
+            {' '}
+            {confirmedTotal}
+          </Col>
+          <Col>
+            Deaths:
+            {' '}
+            {deathsTotal}
+          </Col>
+          <Col>
+            Recovered:
+            {' '}
+            {recoveredTotal}
+          </Col>
+        </Row>
+      </Card.Body>
+    </Card>
   );
 };
 
 Country.propTypes = {
   name: PropTypes.string.isRequired,
   info: PropTypes.shape({
-    id: PropTypes.string,
-    date: PropTypes.string,
-    today_confirmed: PropTypes.string,
-    today_deaths: PropTypes.string,
-    today_recovered: PropTypes.string,
-    new_confirmed: PropTypes.string,
-    new_deaths: PropTypes.string,
-    today_new_cases: PropTypes.string,
-    today_new_recovered: PropTypes.string,
-    today_open_cases: PropTypes.string,
-    yesterday_confirmed: PropTypes.string,
-    yesterday_deaths: PropTypes.string,
-    yesterday_open_cases: PropTypes.string,
-    yesterday_recovered: PropTypes.string,
+    today_confirmed: PropTypes.number,
+    today_deaths: PropTypes.number,
+    today_recovered: PropTypes.number,
   }).isRequired,
 };
 
