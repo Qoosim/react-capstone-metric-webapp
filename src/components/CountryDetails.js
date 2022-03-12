@@ -3,7 +3,7 @@ import { Container, Row, Spinner } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import useInputHook from '../hooks/inputHook';
-import { getDataFromApi } from '../redux/covid19/covid19';
+import { getFetchedData } from '../redux/covid19/covid19';
 import Header from './Header';
 import Region from './Region';
 import Search from './Search';
@@ -25,7 +25,7 @@ const CountryDetails = () => {
     if (isFirstRender) {
       const date = new Date();
       const convertedDate = date.toISOString().replace(/T.+/g, '');
-      dispatch(getDataFromApi(convertedDate));
+      dispatch(getFetchedData(convertedDate));
     }
   }, [dispatch, isFirstRender]);
 

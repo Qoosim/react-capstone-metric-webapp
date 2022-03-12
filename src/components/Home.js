@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Container, Row, Spinner } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import useInputHook from '../hooks/inputHook';
-import { getDataFromApi } from '../redux/covid19/covid19';
+import { getFetchedData } from '../redux/covid19/covid19';
 import Country from './Country';
 import Header from './Header';
 import Search from './Search';
@@ -11,18 +11,17 @@ import Total from './Total';
 const Home = () => {
   const dispatch = useDispatch();
   const covidDataNull = useSelector((state) => state.covidData.data);
-  const covidDataContent = useSelector((state) => state.covidData);
   const isFirstRender = useSelector((state) => state.covidData.isFirstRender);
   const date = useSelector((state) => state.covidData.todaysDate);
   const covidDataTotalMock = useSelector((state) => state.covidData.covidDataTotalMock);
   const { value: countryValue, onChange: countryOnChange, clear: countryClear } = useInputHook('');
-  const covidDataTotal = covidDataNull ? covidDataContent.total : covidDataTotalMock;
+  const covidDataTotal = covidDataNull ? covidDataNull.total : covidDataTotalMock;
 
   useEffect(() => {
     if (isFirstRender) {
       const date = new Date();
       const convertedDate = date.toISOString().replace(/T.+/g, '');
-      dispatch(getDataFromApi(convertedDate));
+      dispatch(getFetchedData(convertedDate));
     }
   }, [dispatch, isFirstRender]);
 

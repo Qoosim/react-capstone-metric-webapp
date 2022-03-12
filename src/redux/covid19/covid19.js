@@ -46,7 +46,7 @@ const fetchDataFromApi = async (date) => {
   return data;
 };
 
-export const getDataFromApi = (date) => (dispatch) => {
+export const getFetchedData = (date) => (dispatch) => {
   fetchDataFromApi(date).then((data) => {
     dispatch(setTodaysDate(date));
     dispatch(setIsFirstRender(false));
