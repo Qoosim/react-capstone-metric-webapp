@@ -33,12 +33,6 @@ export const setTodaysDate = (payload) => ({
   payload,
 });
 
-/*
-const date = new Date();
-const formattedDate = date.toISOString().replace(/T.+/g, '');
-const dataConverted = Object.entries(formattedData);
-*/
-
 const fetchDataFromApi = async (date) => {
   const url = `${basedUrl}${date}`;
   const response = await fetch(url);
