@@ -6,11 +6,11 @@ This is a mobile web application that features 2 pages: The homepage and the det
 
 ## Mobile
 
-![screenshot](./images/mobile.jpeg)
+![screenshot](./images/mobile.png)
 
 ## Desktop
 
-![screenshot](./images/homepage.jpeg)
+![screenshot](./images/homepage.png)
 
 ## ⚒️  Built with
 
