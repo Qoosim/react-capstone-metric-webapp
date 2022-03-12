@@ -21,7 +21,7 @@ This is a mobile web application that features 2 pages: The homepage and the det
 - Git & GitHub
 
 ## 🖥️ Live Demo
-[Live demo link]() :point_left:
+[Live demo link](https://qoosim-react-capstone.netlify.app/) :point_left:
 
 ## 🖥️ Video Presentation
 [Presentation](https://www.loom.com/share/18031b26c52f4cb995496516577dcb94) :point_left:
