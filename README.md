@@ -21,7 +21,7 @@ This is a mobile web application that features 2 pages: The homepage and the det
 - Git & GitHub
 
 ## 🖥️ Live Demo
-[]()
+[Live demo link]() :point_left:
 
 ## Getting Started
 
