@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Covid-19 Metrics Tracker
 
-## Available Scripts
+This is a mobile web application that features 2 pages: The homepage and the details page. The homepage displays all today's statistics about confirmed cases, deaths, and recoveries caused by Covid-19 in the world, as a total and separated by countries. When the user clicks on any country, the website navigates to the details page, which contains the detailed statistics about that specific country as a total and separated by regions. The home page contains a search bar that allows the user to filter by country name. The data is consumed from [Narrativa API](https://covid19tracking.narrativa.com/index_en.html).
 
-In the project directory, you can run:
+## Mobile
 
-### `npm start`
+![screenshot](./src/images/mobile.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Desktop
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![screenshot](./src/images/homepage.png)
 
-### `npm test`
+## ⚒️  Built with
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- Redux
+- Bootstrap
+- Vim
+- Git & GitHub
 
-### `npm run build`
+## 🖥️ Live Demo
+[Live demo link](https://qoosim-react-capstone.netlify.app/) :point_left:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🖥️ Video Presentation
+[Presentation](https://www.loom.com/share/18031b26c52f4cb995496516577dcb94) :point_left:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get a local copy up and running on your machine, follow these simple steps.
+Enter this in your terminal 👇 
+``` 
+  git clone git@github.com:Qoosim/react-capstone-metrics-webapp.git 
+``` 
+## 🛠️ Prerequisites
+```
+  Install Node.js on your machine
+```
+## 🕹️ Setup
+```
+  Clone the repository on your machine and cd into it
+  run npm install
+  run npm run start
+```
+## Author
 
-### `npm run eject`
+👤 **Qoosim AbdulGhaniyy**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- GitHub: [Qoosim](https://github.com/Qoosim)
+- LinkedIn: [Qoosim](https://www.linkedin.com/in/qoosim)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🤝 Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contributions, issues, and feature requests are welcome!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Feel free to check the [issues page](../../issues/).
 
-## Learn More
+## Show your support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Give a ⭐️ if you like this project!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
 
-### Code Splitting
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- To those assist in understanding the concept of React and Redux 
 
-### Analyzing the Bundle Size
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is [MIT](./MIT.md) licensed.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
