@@ -64,7 +64,7 @@ Give a ⭐️ if you like this project!
 
 - Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
-- To those assist in understanding the concept of React 
+- To those assist in understanding the concept of React and Redux 
 
 ## 📝 License
 
