@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { Col, Row } from 'react-bootstrap';
 
 const Total = ({ covidDataTotal }) => {
-  console.log(covidDataTotal);
   const {
     today_confirmed: confirmedTotal,
     today_deaths: deathsTotal,
@@ -11,6 +10,7 @@ const Total = ({ covidDataTotal }) => {
     today_new_deaths: deathsToday,
     today_new_recovered: recoveredToday,
   } = covidDataTotal;
+
   return (
     <Row xs={1} className="mx-0 gy-1 mb-2">
       <Col>
@@ -49,14 +49,6 @@ const Total = ({ covidDataTotal }) => {
 
 Total.propTypes = {
   covidDataTotal: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-  /*
-  confirmedTotal: PropTypes.number.isRequired,
-  deathsTotal: PropTypes.number.isRequired,
-  recoveredTotal: PropTypes.number.isRequired,
-  confirmedToday: PropTypes.number.isRequired,
-  deathsToday: PropTypes.number.isRequired,
-  recoveredToday: PropTypes.number.isRequired,
-  */
 };
 
 export default Total;
